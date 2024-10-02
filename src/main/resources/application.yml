@@ -11,3 +11,15 @@ spring:
       elasticsearch:
         rest:
           uris: http://localhost:9200
+  jpa:
+    hibernate:
+      ddl-auto: update  # of create, validate, none, afhankelijk van je behoeften
+    show-sql: true      # Zet dit op true om SQL-queries te loggen
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect  # Pas dit aan voor jouw database
+  logging:
+    level:
+      root: DEBUG
+  server:
+    port: 8081  # of een andere beschikbare poort
